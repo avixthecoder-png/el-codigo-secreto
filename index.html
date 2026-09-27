@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL CÓDIGO SECRETO</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #222;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 12px 18px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        #secret {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+        }
+
+        #message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Adivinanza</h1>
+
+    <p>
+        No hace falta ser un gran genio<br>
+        ni tener de acertijos un imperio.<br>
+        A veces basta, para avanzar,<br>
+        con aprender las reglas y saberlas usar.
+    </p>
+
+    <p>
+        Aprender un idioma te puede ayudar,<br>
+        pero uno de programación te puede transformar.<br>
+        Con unas pocas líneas y algo de atención,<br>
+        puedes darle vida a una imaginación.
+    </p>
+
+    <p>
+        Quien sabe crear no vive de adivinar,<br>
+        pues puede construir, probar y cambiar.<br>
+        Mientras unos buscan la pista escondida,<br>
+        otros hacen que la respuesta cobre vida.
+    </p>
+
+    <p>
+        No le preguntes a una IA mi solución,<br>
+        pues pensar por ti no es ninguna evolución.<br>
+        Si otro resuelve lo que tú debes pensar,<br>
+        quizá tengas la respuesta, pero no supiste llegar.
+    </p>
+
+    <p>
+        Lee cada verso, vuelve a mirar,<br>
+        hay algo entre líneas que debes encontrar.<br>
+        No busques mi nombre, busca la razón,<br>
+        pues quizá la respuesta esté en tu propia creación.
+    </p>
+
+        <h1>¿Qué palabra estoy buscando?</h1>
+
+        <input
+            type="text"
+            id="wordInput"
+            placeholder="Escribe tu respuesta aquí"
+        >
+
+        <button onclick="checkWord()">
+            Desbloquear
+        </button>
+
+        <p id="message"></p>
+
+        <div id="secret">
+            El código secreto lo puedes encontrar aquí: 
+        </div>
+
+    </div>
+
+    <script>
+
+        function checkWord() {
+
+            let word = document.getElementById("wordInput").value;
+
+            //Si has llegado hasta aqui te felicito por usar tu cabeza. 
+            if (word.toLowerCase() === "hello") {
+
+                document.getElementById("secret").style.display = "block";
+
+                document.getElementById("message").textContent =
+                    "Bravo!";
+
+            } else {
+
+                document.getElementById("message").textContent =
+                    "Palabra incorrecta. Prueba de nuevo.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html><!DOCTYPE html>
